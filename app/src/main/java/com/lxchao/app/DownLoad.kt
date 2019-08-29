@@ -13,6 +13,7 @@ import java.lang.Exception
  * @author lixiangchao
  * @date 2019/8/26
  * @version 1.0.0
+ *
  */
 fun download(context: Context, position: Int, url: String, callBack: MainActivity.OnMainCallBack?) {
     OkHttpUtils.get().tag(url).url(url).build().execute(object : FileCallBack(context.cacheDir.absolutePath, "${System.currentTimeMillis()}.jpg") {
